@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba</title>
+    <script src="fichero.js"></script>
+</head>
+<body>
+    <script>
+        
+        function ejemplo (a,b, ...restParams){
+            console.log(a);
+            console.log(b);
+            console.log(restParams);
+        }
+
+        let vector=[1,2,3,4,5,6,7,8];
+        ejemplo(...vector);
+
+    </script>
+</body>
+</html>
