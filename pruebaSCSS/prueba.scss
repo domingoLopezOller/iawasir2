@@ -1,0 +1,80 @@
+$primary-color: #3498db; // Azul claro
+$secondary-color: #e74c3c; // Rojo
+$font-family: 'Arial', sans-serif;
+$base-font-size: 16px;
+
+body {
+  background-color: #f2f2f2; // Gris claro de fondo
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+h1 {
+  font-size: 2rem;
+  color: $primary-color;
+  margin-top: 20px;
+}
+p {
+  font-size: 1.2rem;
+  color: #555; // Gris oscuro
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+.product {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  transition: transform 0.2s ease;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+    color: #777;
+  }
+  .important-text {
+    font-weight: bold;
+    color: $secondary-color;
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+}
+// Define un mapa para los estilos de botón
+$button-styles: (
+  primary-button: $primary-color,
+  secondary-button: #2ecc71, // Verde esmeralda
+  buy-button: #f39c12, // Amarillo anaranjado
+);
+
+// Define un mixin para centrar elementos
+@mixin center-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// Bucle `@each` para recorrer el mapa `$button-styles`
+ @each $button-styles, $color in $button-styles {
+    .#{$button-styles} {
+      background-color: $color;
+      &:hover {
+        background-color: darken($color, 10%);
+      }
+    }
+  }
+//Usar el mixin
+.centered {
+  @include center-element;
+}
