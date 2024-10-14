@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["prueba.scss"],"names":[],"mappings":"AAKA;EACE;EACA,aALY;EAMZ;EACA;EACA;;;AAEF;EACE;EACA,OAdc;EAed;;;AAEF;EACE;EACA;;;AAEF;EACI;EACA;EACA;EACA;EACA;EACA;;;AAEJ;EACE;EACA;EACA;EACA;EACA;EACA;;AACA;EACE;EACA;;AAEF;EACE;;AAEF;EACE;EACA;;AAEF;EACE;EACA,OAhDc;EAiDd;EACA;;;AAkBA;EACE,kBAfU;;AAgBV;EACE;;;AAHJ;EACE,kBAfU;;AAgBV;EACE;;;AAHJ;EACE,kBAfU;;AAgBV;EACE;;;AAKR;EAdE;EACA;EACA","file":"prueba.css"}
+{"version":3,"sources":["prueba.scss","prueba.css"],"names":[],"mappings":"AAGA;EACE,cAJc;ACEhB","file":"prueba.css"}
