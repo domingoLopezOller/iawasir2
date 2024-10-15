@@ -1,9 +1,20 @@
 import React from 'react'
-import './web.css'
+import {Cabecera, Cabecera1, Cabecera2, Cabecera3 } from './Cabecera'
 
 function Web() {
   return (
-    <div className="caja">Domingo López Oller</div>
+    <div>
+      <div>Domingo Lópe z OLLER</div>
+      <Cabecera/>
+      <Cabecera/>
+      <Cabecera1/>
+      <ol>
+      <Cabecera2 mensaje="que guay es REACT" otro="otro texto"/>
+      <Cabecera3 mensaje="vaya rollo a las 14:30" otro="otro Texto"/>
+      <Cabecera3  otro="usando cabecera3"/>
+      </ol>
+      
+    </div>
   )
 }
 
