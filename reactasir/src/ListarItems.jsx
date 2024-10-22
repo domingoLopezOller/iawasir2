@@ -1,5 +1,5 @@
 import React from 'react'
-import './listarItems.css'
+import styles from './listarItems.module.css'
 
 export const ListarItems= () => {
     let ITEMS = ['cat', 'dog', 'bird','cat']; let contador=0;
@@ -38,17 +38,35 @@ export const ListarItems3= () => {
     </ul>
   )
 }
-export const ListarTabla= () => {
+export const ListarTabla= (props) => {
     function getItems(){ return json2.map((heroe,index) => {
-        if (heroe.publisher=="DC Comics"){
-          return <tr key={index}> <td>{heroe.superhero}</td> </tr>;
+        if (heroe.publisher===props.tipo){
+          return <tr key={index} className={styles.tabla}><td className={styles.tabla}>{heroe.superhero}</td></tr>;
         }
       });
     }
     return (
-      <table>
-        <tr><th>Nombre del Héroe</th></tr>
-        {getItems()}
+      <table className={styles.tabla}>
+        <thead>
+        <tr className={styles.tabla}><th className={styles.cabecera}>Nombre del Héroe</th></tr>
+        </thead>
+        <tbody>
+        {
+          getItems()
+        }
+        </tbody>
       </table>
     )
   }
+
+  export const ListarTablas= ({publisher,color})=> {
+    if(publisher==="Marvel Comics"){
+        return <ListarTabla tipo={publisher} color={color} />
+    }
+    else if(publisher==="DC Comics"){
+        return <ListarTabla tipo={publisher} color={color} />
+    }    
+    else{
+      return <p>No se han obtenido resultados</p>;
+    }
+}

@@ -1,8 +1,8 @@
 import React from 'react'
 import {Cabecera, Cabecera1, Cabecera2, Cabecera3 } from './Cabecera'
-import { ListarItems, ListarItems2, ListarItems3, ListarTabla } from './ListarItems'
-
-
+import { ListarItems, ListarItems2, ListarItems3, ListarTabla, ListarTablas } from './ListarItems'
+import ControlledCarousel from './Carousel'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Web() {
   return (
@@ -22,8 +22,13 @@ function Web() {
       <ListarItems2/>
       <p>Listar los héroes de Marvel del fichero heroes.json</p>
       <ListarItems3/>
-      <p>Tabla con heroes.json</p>
-      <ListarTabla/>
+      <h3>Tabla con heroes.json</h3>
+      {/* <ListarTabla tipo="DC Comics"/> */}
+      <ListarTablas publisher="DC Comics" color="red"/>
+
+      <h2> UTILIZANDO BOOTSTRAP</h2>
+      <ControlledCarousel/>
+
     </div>
   )
 }
