@@ -1,0 +1,22 @@
+.cabecera{
+    /* background-color:red; */
+    /* background-image: url('/header.jpg'); */
+    background: linear-gradient(rgb(146, 138, 138) 25%, transparent 75%),  url('/header.jpg') no-repeat center;
+    background-repeat:  no-repeat;
+    background-position: center;
+    background-size: cover;
+    height:300px;
+    width:100%;
+    display:flex;
+    flex:row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:800px){
+    .cabecera{
+        background-color: greenyellow;
+        background-image: none;
+    }
+
+  }

@@ -1,0 +1,27 @@
+main{
+    background-color:greenyellow;
+    height:500px;
+    width:100%;
+    display:flex;
+    flex:row nowrap;
+}
+
+main section{
+    width:80%;
+    background-color:antiquewhite;
+}
+
+main aside{
+    width:20%;
+    background-color:blueviolet;
+}
+
+@media (max-width:800px){
+    aside{
+        display:none;
+    }
+    main section{
+        width:100%;
+    }
+
+  }
