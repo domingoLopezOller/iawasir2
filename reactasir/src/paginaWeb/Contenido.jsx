@@ -4,6 +4,7 @@ import Section from './Section'
 import Aside from './Aside'
 
 import './contenido.module.css'
+import Rutas from './Rutas'
 
 function Contenido() {
   return (
@@ -11,7 +12,10 @@ function Contenido() {
     <Nav/>
     <main>
         <Aside/>
-        <Section/>
+        {/* <Section/> */}
+        <section>
+          <Rutas/>np
+        </section>
     </main>
     </>
   )
