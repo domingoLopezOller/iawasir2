@@ -1,0 +1,12 @@
+section{
+    display:flex;
+    flex:row wrap;
+    align-items: center;
+    justify-content: center;
+}
+section article{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: center;
+}
