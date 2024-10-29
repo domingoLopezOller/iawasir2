@@ -1,13 +1,14 @@
 import { BrowserRouter as Router, Route, Routes, useParams } from "react-router-dom";
 import Tarjeta from "./Cards";
+import Nav from "./Nav";
 
 export default function Rutas() {
   return (
     <Router>
-      <Navbar />
+      <Nav/>
       <Routes>
         <Route exact path="/" element={<Home/>} />
-	    <Route path="/nombre" element={<MySkills/>} />
+	      <Route path="/nombre" element={<MySkills/>} />
         <Route path="/producto/:numero" element={<Producto/>} />
         <Route path="/about" element={<About/>} />
       </Routes>
@@ -35,5 +36,5 @@ function MySkills() {
 function Producto() {
     //Lectura del parámetro de la URL
     const params = useParams();
-    return <h2>Parámetro introducido: {params.numero}</h2>;
+    return <h2>PRODUCTO ELEGIDO: {params.numero}</h2>;
 }
