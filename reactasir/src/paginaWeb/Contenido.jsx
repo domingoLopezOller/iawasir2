@@ -17,7 +17,7 @@ function Contenido() {
       <aside>
         <Aside/>
         <Routes>
-          <Route path="/about" element={<About/>} />
+          <Route path="/about" element={<About2/>} />
         </Routes>
       </aside>
         {/* <Section/> */}
@@ -46,8 +46,22 @@ function Home() {
 }
 
 //Sólo se verá con /about en la URL
-function About() {
-  return <div>about</div>;
+function About(){
+  const request = async () => {
+    try {
+      const response = await fetch("../heroes.json");
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error("Error al realizar la petición o procesar los datos: ", error);
+    }
+  }
+  console.log(request);
+  return <h2>ABOUT</h2>
+}
+
+function About2() {
+  return <h2>Datos en aside</h2>;
 }
 function MySkills() {
     return <div>

@@ -3,5 +3,7 @@
 # Example .gitignore files: https://github.com/github/gitignore
 /.vscode/
 misPruebasReact
-mispruebasnext
+mispruebas*
+mispruebasnest
 nextui
+nextjs_api_crud

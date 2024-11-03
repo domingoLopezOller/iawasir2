@@ -13,7 +13,7 @@ main section{
 
 main aside{
     width:20%;
-    background-color:blueviolet;
+    background-color:yellowgreen;
 }
 
 @media (max-width:800px){
