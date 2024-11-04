@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Este código permite cambiar el contenido del h3 con JavaScript-->
+<h3 id="texto">Mi nombre es: </h3>
+<script>
+  function cambiarNombre()
+  {
+    let nombre=prompt('Introduce tu nombre');
+    document.getElementById("texto").textContent="Tu nombre es: "+nombre; 
+  }
+</script>
+<input onclick="cambiarNombre()" type="button" value="Introduce tu Nombre" id="myButton1" />
+</body>
+</html>

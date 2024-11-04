@@ -6,6 +6,7 @@ import Aside from './Aside'
 
 import './contenido.module.css'
 import Rutas from './Rutas'
+import { CambiarNombre } from './CambiarNombre';
 
 function Contenido() {
   return (
@@ -24,10 +25,13 @@ function Contenido() {
         <section>
         <Routes>
         <Route exact path="/" element={<Home/>} />
-	      <Route path="/noticias" element={<MySkills/>}>
+	      <Route path="/noticias" element={<Noticias/>}>
           <Route path="/noticias/jefatura" element={<Jefatura/>} />  
           <Route path="/noticias/informatica" element={<Informatica/>} />  
         </Route>
+        {/* <Route path="/noticias" element={<Noticias/>}/>
+        <Route path="/noticias/jefatura" element={<Jefatura/>}/>
+        <Route path="/noticias/informatica" element={<Informatica/>}/> */}
         {/* <Route path="/producto/:numero" element={<Producto/>} /> */}
         <Route path="/about" element={<About/>} />
         <Route path="*" element={<NotFound/>} />
@@ -42,35 +46,21 @@ function Contenido() {
 
 export default Contenido
 function Home() {
-  return <div>home</div>;
+  return <CambiarNombre/>;
 }
 
 //Sólo se verá con /about en la URL
 function About(){
-  const request = async () => {
-    try {
-      const response = await fetch("../heroes.json");
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error("Error al realizar la petición o procesar los datos: ", error);
-    }
-  }
-  console.log(request);
   return <h2>ABOUT</h2>
 }
 
 function About2() {
   return <h2>Datos en aside</h2>;
 }
-function MySkills() {
+function Noticias() {
     return <div>
       <h1>NOTICIAS DE HUÉRCAL OVERA</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, labore in tempora quae debitis reiciendis tempore eos laborum rerum officia, ipsam doloribus iusto repudiandae earum sunt voluptatibus alias doloremque beatae!
-      Ipsa numquam, error ducimus, voluptate libero sit rem eius dolores neque porro tenetur culpa dolorem cupiditate, doloribus totam odio sint officia iusto eveniet ab labore. Esse dolore molestias perspiciatis ullam?
-      Quam quasi quas laudantium ipsam fugit ullam? Aliquam molestiae perferendis odio. Dolorum perspiciatis cum ratione nihil pariatur non voluptatum, ducimus repellat minus! Tempore distinctio, rem similique incidunt blanditiis veritatis facilis!
-      Fuga, recusandae. Similique provident id accusantium commodi maxime ea doloremque fugiat vel dignissimos! Veritatis saepe minus maiores magnam assumenda accusantium similique praesentium nam, vel doloribus placeat ullam repudiandae repellat? Delectus.
-      Distinctio consequuntur quaerat reiciendis, id animi repudiandae enim quae! Amet eaque ad reiciendis corrupti, ullam hic maxime ea enim est totam? Eum explicabo vitae est praesentium nihil. Quam, error iusto.</p>
+      <p>SE HA TERMINADO LA ALERTA ROJA POR INUNDACIÓN </p>
       <hr/>
       <Outlet/>
     </div>
@@ -90,8 +80,15 @@ function NotFound() {
 }
 
 function Jefatura() {
-  return <h2>NOTICIAS DE JEFATURA</h2>;
+  return <>
+   
+  <h2>NOTICIAS DE JEFATURA</h2>;
+  </>
 }
 function Informatica() {
-  return <h2>NOTICIAS DE INFORMÁTICA</h2>;
+  return <>
+  
+ <h2>NOTICIAS DE INFORMATICA</h2>
+ <p>¿quieres conocer los nuevos avances en tecnología</p>
+ </>
 }

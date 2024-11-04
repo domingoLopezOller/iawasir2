@@ -8,6 +8,7 @@ function Nav() {
         <Link to="/noticias">Noticias</Link> - 
         <Link to="/noticias/jefatura"> Noticias Jefatura - </Link>
         <Link to="/noticias/informatica"> Departamento Informática - </Link>
+        <Link to="/noticias/otra"> OTRA - </Link>
         <Link to="/about"><IoIosContact />Contacto</Link> - 
     </nav>
   )
