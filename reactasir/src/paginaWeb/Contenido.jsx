@@ -7,6 +7,7 @@ import Aside from './Aside'
 import './contenido.module.css'
 import Rutas from './Rutas'
 import { CambiarNombre } from './CambiarNombre';
+import { Pokemon } from './Pokemon';
 
 function Contenido() {
   return (
@@ -46,7 +47,7 @@ function Contenido() {
 
 export default Contenido
 function Home() {
-  return <CambiarNombre/>;
+  return <Pokemon id="25" />;
 }
 
 //Sólo se verá con /about en la URL
