@@ -4,6 +4,8 @@ import React from 'react'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LanguageIcon from '@mui/icons-material/Language';
+import { AiFillFacebook } from "react-icons/ai";
+
 
 function RedesSociales({RRSS}) {
   return (
@@ -11,8 +13,8 @@ function RedesSociales({RRSS}) {
         {
             RRSS.map((red,index) => {
             if (red==="Facebook"){
-                return <a key= {index} href={red.url} >  <FacebookIcon sx={{ fontSize: 40, color:"red" }}/>  {red.nombre}</a>
-            }
+                return <a key= {index} href={red.url} >  <FacebookIcon sx={{ fontSize: 40, color:"red" }}/>  {red.nombre} <AiFillFacebook/> </a> 
+            } 
             else if(red==="Instagram"){
                 return <a key= {index} href={red.url} >  <InstagramIcon sx={{ fontSize: 40, color: "green" }}/>  {red.nombre}</a>
             }

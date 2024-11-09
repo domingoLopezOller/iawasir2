@@ -8,12 +8,12 @@ main{
 
 main section{
     width:80%;
-    background-color:antiquewhite;
+    background-color:rgb(232, 200, 158);
 }
 
 main aside{
     width:20%;
-    background-color:blueviolet;
+    background-color:rgb(170, 101, 234);
 }
 
 @media (max-width:800px){

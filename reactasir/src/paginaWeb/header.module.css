@@ -5,11 +5,13 @@
     background-repeat:  no-repeat;
     background-position: center;
     background-size: cover;
-    height:300px;
+    height:400px;
     width:100%;
     display:flex;
     flex:row nowrap;
     align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(134, 235, 231);
     justify-content: center;
 }
 
@@ -20,3 +22,12 @@
     }
 
   }
+
+  .header{
+    position: fixed;
+  }
+
+
+ 
+ 
+

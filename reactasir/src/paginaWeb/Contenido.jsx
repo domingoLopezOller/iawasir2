@@ -6,6 +6,9 @@ import Aside from './Aside'
 
 import './contenido.module.css'
 import Rutas from './Rutas'
+import {Pokemon} from './pokemos'
+import Tarjeta from './Cards';
+import ImageGallery from './ImageGallery.modules';
 
 function Contenido() {
   return (
@@ -42,12 +45,35 @@ function Contenido() {
 
 export default Contenido
 function Home() {
-  return <div>home</div>;
+  return (
+    <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+            <div style={{ display: 'flex', gap: '10px' }}>
+        <Tarjeta 
+          title="Título 1" 
+          text="Descripción de la primera tarjeta" 
+          imgSrc="/paisaje.jpeg"
+        />
+        <Tarjeta 
+        />
+        <Tarjeta 
+        />
+     </div>
+      <ImageGallery /> {/* Agrega la galería al lado de los "Card Title" */}
+    </div>
+  );
 }
 
 //Sólo se verá con /about en la URL
 function About() {
-  return <div>about</div>;
+  return <div>
+    <h1>Contactos:</h1>
+    <p>
+        Para ver información de contacto, intenta visitar esta página: 
+        <a href="/ruta-no-valida" style={{ color: 'red', textDecoration: 'underline', marginLeft: '5px' }}>
+          Página inexistente
+        </a>
+      </p>
+  </div>;
 }
 function MySkills() {
     return <div>
@@ -79,5 +105,19 @@ function Jefatura() {
   return <h2>NOTICIAS DE JEFATURA</h2>;
 }
 function Informatica() {
-  return <h2>NOTICIAS DE INFORMÁTICA</h2>;
+  return <div>
+  <h2>NOTICIAS DE INFORMÁTICA</h2>
+  <p>El departamento se crea en el curso académico 2001/02 con la implantación del ciclo formativo de grado superior de Administración 
+    de Sistemas Informáticos, ampliándose en 2003 con la implantación del ciclo de grado medio de Explotación de Sistemas Informáticos. 
+    Actualmente seguimos manteniendo los dos ciclos formativos reconvertidos a LOE, Administración de sistemas informáticos en red y 
+    Sistemas Microinformáticos y Redes , así como la Formación Profesional Básica de Informática y Comunicaciones.
+    Desde nuestros comienzos mantenemos una estrecha relación con empresas líderes en el sector informático como CajaMar, Enec Informática, 
+    Setesur, Telefónica Movistar, Hispatec,Cotronic, Cosentino, Distribuidora Uribe, entre otras.
+    Durante la trayectoria de nuestro departamento, nos sentimos orgullosos de que un amplio porcentaje de nuestro alumnado ocupe 
+    actualmente puestos de trabajos relacionados con nuestros ciclos (administradores de sistemas, programadores, instaladores,…), hayan 
+    emprendido sus propios negocios o hayan continuado con éxito estudios universitarios. 
+   </p>
+    </div>
 }
+ 
+  
