@@ -1,0 +1,45 @@
+/* Estilo del encabezado */
+.header-container {
+    background-color: #f8f9fa; /* Fondo claro */
+    padding: 20px 0;
+    border-bottom: 2px solid #ddd; /* Línea en la parte inferior */
+  }
+  
+  /* Estilo del logo */
+  .logo {
+    max-width: 80px;
+  }
+  
+  /* Estilo del título */
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+  }
+  
+  /* Estilo del subtítulo */
+  .subtitle {
+    font-size: 1rem;
+    color: #777; /* Color gris claro */
+    margin: 0;
+  }
+  
+  /* Estilo del contenedor de búsqueda */
+  .search-container {
+    max-width: 200px;
+  }
+  
+  /* Estilo de la barra de búsqueda */
+  .search-input {
+    padding: 5px 10px;
+    border-radius: 20px; /* Bordes redondeados */
+    border: 1px solid #ddd;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .search-input:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Efecto de enfoque */
+    outline: none;
+  }
+  
