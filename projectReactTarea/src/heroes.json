@@ -1,0 +1,162 @@
+[
+    {
+        "superhero": "Batman", 
+        "publisher": "DC Comics", 
+        "alter_ego": "Bruce Wayne",
+        "first_appearance": "Detective Comics #27",
+        "characters": "Bruce Wayne",
+        "image": "batman.jpg"
+    },
+    {
+        "superhero": "Superman", 
+        "publisher": "DC Comics", 
+        "alter_ego": "Kal-El",
+        "first_appearance": "Action Comics #1",
+        "characters": "Kal-El",
+        "image": "superman.jpg"
+    },
+    {
+        "superhero": "Flash", 
+        "publisher": "DC Comics", 
+        "alter_ego": "Jay Garrick",
+        "first_appearance": "Flash Comics #1",
+        "characters": "Jay Garrick, Barry Allen, Wally West, Bart Allen",
+        "image": "flash.jpg"
+    },
+    {
+        "superhero": "Green Lantern", 
+        "publisher": "DC Comics", 
+        "alter_ego": "Alan Scott",
+        "first_appearance": "All-American Comics #16",
+        "characters": "Alan Scott, Hal Jordan, Guy Gardner, John Stewart, Kyle Raynor, Jade, Sinestro, Simon Baz",
+        "image": "greenlantern.jpg"
+    },
+    {
+        "superhero": "Green Arrow", 
+        "publisher": "DC Comics", 
+        "alter_ego": "Oliver Queen",
+        "first_appearance": "More Fun Comics #73",
+        "characters": "Oliver Queen",
+        "image": "greenarrow.jpg"
+    },
+    {
+        "superhero": "Wonder Woman", 
+        "publisher": "DC Comics", 
+        "alter_ego": "Princess Diana",
+        "first_appearance": "All Star Comics #8",
+        "characters": "Princess Diana",
+        "image": "wonderwoman.jpg"
+    },
+    {
+        "superhero": "Martian Manhunter", 
+        "publisher": "DC Comics", 
+        "alter_ego": "J'onn J'onzz",
+        "first_appearance": "Detective Comics #225",
+        "characters": "Martian Manhunter",
+        "image": "martianmanhunter.jpg"
+    },
+    {
+        "superhero": "Robin/Nightwing", 
+        "publisher": "DC Comics", 
+        "alter_ego": "Dick Grayson",
+        "first_appearance": "Detective Comics #38",
+        "characters": "Dick Grayson",
+        "image": "robin.jpg"
+    },
+    {
+        "superhero": "Blue Beetle", 
+        "publisher": "DC Comics", 
+        "alter_ego": "Dan Garret",
+        "first_appearance": "Mystery Men Comics #1",
+        "characters": "Dan Garret, Ted Kord, Jaime Reyes",
+        "image": "bluebeetle.jpg"
+    },
+    {
+        "superhero": "Black Canary", 
+        "publisher": "DC Comics", 
+        "alter_ego": "Dinah Drake",
+        "first_appearance": "Flash Comics #86",
+        "characters": "Dinah Drake, Dinah Lance",
+        "image": "blackcanary.jpg"
+    },
+    {
+        "superhero": "Spider Man", 
+        "publisher": "Marvel Comics", 
+        "alter_ego": "Peter Parker",
+        "first_appearance": "Amazing Fantasy #15",
+        "characters": "Peter Parker",
+        "image": "spiderman.jpg"
+    },
+    {
+        "superhero": "Captain America", 
+        "publisher": "Marvel Comics", 
+        "alter_ego": "Steve Rogers",
+        "first_appearance": "Captain America Comics #1",
+        "characters": "Steve Rogers",
+        "image": "captainamerica.jpg"
+    },
+    {
+        "superhero": "Iron Man", 
+        "publisher": "Marvel Comics", 
+        "alter_ego": "Tony Stark",
+        "first_appearance": "Tales of Suspense #39",
+        "characters": "Tony Stark",
+        "image": "ironman.jpg"
+    },
+    {
+        "superhero": "Thor", 
+        "publisher": "Marvel Comics", 
+        "alter_ego": "Thor Odinson",
+        "first_appearance": "Journey into Myster #83",
+        "characters": "Thor Odinson",
+        "image": "thor.jpg"
+    },
+    {
+        "superhero": "Hulk", 
+        "publisher": "Marvel Comics", 
+        "alter_ego": "Bruce Banner",
+        "first_appearance": "The Incredible Hulk #1",
+        "characters": "Bruce Banner",
+        "image": "hulk.jpg"
+    },
+    {
+        "superhero": "Wolverine", 
+        "publisher": "Marvel Comics", 
+        "alter_ego": "James Howlett",
+        "first_appearance": "The Incredible Hulk #180",
+        "characters": "James Howlett",
+        "image": "wolverine.jpg"
+    },
+    {
+        "superhero": "Daredevil", 
+        "publisher": "Marvel Comics", 
+        "alter_ego": "Matthew Michael Murdock",
+        "first_appearance": "Daredevil #1",
+        "characters": "Matthew Michael Murdock",
+        "image": "daredevil.jpg"
+    },
+    {
+        "superhero": "Hawkeye", 
+        "publisher": "Marvel Comics", 
+        "alter_ego": "Clinton Francis Barton",
+        "first_appearance": "Tales of Suspense #57",
+        "characters": "Clinton Francis Barton",
+        "image": "hawkeye.jpg"
+    },
+    {
+        "superhero": "Cyclops", 
+        "publisher": "Marvel Comics", 
+        "alter_ego": "Scott Summers",
+        "first_appearance": "X-Men #1",
+        "characters": "Scott Summers",
+        "image": "cyclops.jpg"
+    },
+    {
+        "superhero": "Silver Surfer", 
+        "publisher": "Marvel Comics", 
+        "alter_ego": "Norrin Radd",
+        "first_appearance": "The Fantastic Four #48",
+        "characters": "Norrin Radd",
+        "image": "images/silversurfer.jpg"
+    }
+]

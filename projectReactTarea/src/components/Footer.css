@@ -1,0 +1,28 @@
+footer {
+  background-color: blueviolet;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+  
+  footer div {
+    margin: 0 auto;
+    font-size: 30px;
+    padding: 5px 5px;
+    text-indent: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  footer div a {
+    padding-right: 1%;
+    display: inline-block;
+    text-decoration: none;
+    color: antiquewhite;
+  }
+  
+  footer div a:hover {
+    color: green;
+  }

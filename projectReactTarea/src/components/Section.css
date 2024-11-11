@@ -1,0 +1,59 @@
+/* Ajusta el contenedor */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Espacio entre las cartas */
+  justify-content: center; /* Centra las cartas en el contenedor */
+  margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+/* Configura las cartas más anchas y más pequeñas en altura */
+.card {
+  width: 250px; /* Aumenta el ancho de las cartas */
+  height: 300px; /* Ajusta la altura de las cartas */
+  margin: 0 auto; /* Centra las cartas individualmente */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Efecto de hover en las cartas */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Ajusta las imágenes para que no se estiren */
+.card-img-top {
+  object-fit: cover;
+  height: 350px; /* Ajusta la altura de la imagen */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Configuración de responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .row {
+    justify-content: space-around; /* Asegura que las cartas estén distribuidas uniformemente */
+  }
+
+  .card {
+    max-width: 90%; /* Las cartas ocupan casi todo el ancho en pantallas pequeñas */
+    height: 250px; /* Ajusta la altura de las cartas para pantallas pequeñas */
+  }
+}
+
+/* Configuración para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+  .card {
+    max-width: 90%; /* Asegura que las cartas no sean demasiado grandes */
+    height: 220px; /* Ajusta la altura de las cartas en móviles */
+  }
+
+  .card-img-top {
+    height: 120px; /* Reduce la altura de la imagen en pantallas muy pequeñas */
+  }
+}
+
+  
+  

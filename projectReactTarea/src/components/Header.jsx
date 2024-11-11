@@ -5,11 +5,11 @@ const Header = () => {
   return (
     <header className="header-container">
       <div className="container d-flex align-items-center justify-content-between">
-        <div className="d-flex align-items-center">
+        <div className="logo-text-container d-flex align-items-center">
           <img
-            src="/home/ubuntu/2doAsir/iawasir2/projectReactTarea/public/LogoIESCuraValera-969x1024 (1).png" //  logo
+            src="/LogoIESCuraValera-969x1024 (1).png" // Cambia por la ruta real de tu logo
             alt="Logo del Instituto"
-            className="logo mr-3"
+            className="logo"
           />
           <div>
             <h1 className="title">IES Cura Valera, Huércal-Overa</h1>

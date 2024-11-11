@@ -1,42 +1,21 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Estilo para el Header */
+header {
+  /* Aquí puedes darle estilo al header si es necesario */
+  background-color: #333;
+  color: white;
+  padding: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+/* Estilo para el Navbar */
+nav {
+  width: 100%;
+  height: 60px;  /* Ajusta la altura del navbar */
+  background-color: orange;
+  position: relative;  /* Asegura que esté en el flujo normal */
+  top: 0;
+  z-index: 1000;  /* Esto puede ser útil si hay otros elementos con un z-index mayor */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;  /* Añade un margen para separarlo del header */
 }
