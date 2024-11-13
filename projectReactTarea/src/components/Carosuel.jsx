@@ -20,14 +20,14 @@ const CarouselComponent = () => {
           </div>
         </div>
         <div className="carousel-item">
-          <img src="https://media.gettyimages.com/id/182727232/es/foto/el-alhambra.jpg?s=2048x2048&w=gi&k=20&c=1AjCB24FTvLrWhgzEBWC07KQPmTxVAzoQTkXmlyvQz8=" className="d-block w-100" alt="Segunda imagen" />
+          <img src="https://images.squarespace-cdn.com/content/v1/5a86b05bcf81e0af04936cc7/1523949473921-P9M4S22TVYZUFCMKS9HJ/setas-sevilla.jpg?format=1500w" className="d-block w-100" alt="Segunda imagen" />
           <div className="carousel-caption d-none d-md-block">
             <h5>Segunda diapositiva</h5>
             <p>Descripción para la segunda diapositiva.</p>
           </div>
         </div>
         <div className="carousel-item">
-          <img src="https://media.gettyimages.com/id/182727232/es/foto/el-alhambra.jpg?s=2048x2048&w=gi&k=20&c=1AjCB24FTvLrWhgzEBWC07KQPmTxVAzoQTkXmlyvQz8=" className="d-block w-100" alt="Tercera imagen" />
+          <img src="https://www.renfe.com/content/dam/renfe/es/Viajeros/Secciones/Experiencias/esc%C3%A1pate-en-tren/p-pueblos-andalucia.jpg" className="d-block w-100" alt="Tercera imagen" />
           <div className="carousel-caption d-none d-md-block">
             <h5>Tercera diapositiva</h5>
             <p>Descripción para la tercera diapositiva.</p>
