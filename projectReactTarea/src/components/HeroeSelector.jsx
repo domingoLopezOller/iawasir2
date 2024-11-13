@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Select, MenuItem, InputLabel, FormControl } from "@mui/material";
 import heroesData from "../../src/heroes.json"; // Asegúrate de que la ruta sea correcta
+import { auto } from "@popperjs/core";
 
 const HeroSelector = () => {
   const [selectedHero, setSelectedHero] = useState("");
@@ -54,7 +55,7 @@ const HeroSelector = () => {
           <img
             src={`/images/${heroInfo.image}`} // Mostrar la imagen del héroe seleccionado
             alt={heroInfo.superhero}
-            style={{ width: 200, height: 200, objectFit: "cover" }} // Tamaño y ajuste de la imagen
+            style={{ width: auto , height: 250, objectFit: "cover" }} // Tamaño y ajuste de la imagen
           />
           <p><strong>Publisher:</strong> {heroInfo.publisher}</p>
           <p><strong>Alter Ego:</strong> {heroInfo.alter_ego}</p>
