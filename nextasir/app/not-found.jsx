@@ -1,18 +1,23 @@
 "use client"
 import Link from "next/link";
-import { useEffect } from "react"
+import { useRouter } from "next/navigation";
 
-export default function Error({ error, reset }) {
-     useEffect(() => {
-         console.error(error)
-     },[error])
+export default function Error() {
+    const router = useRouter();
+    const goToHome = () => {
+        router.push('/');
+      };
 
     return (
+        <>
         <div>
             <h2>Something went wrong!</h2>
-            <Link href="/"><button>
-                 Try again
-            </button></Link>
+            <a href="/"><button> Botón con Link   </button></a>
         </div>
+        <div>
+            <h2>Something went wrong!</h2>
+            <button   onClick={goToHome}> Botón con useRouter </button>
+        </div>
+        </>
     );
 }
