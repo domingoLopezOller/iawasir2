@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Image from "next/image";
 import Footero from "@/componentes/Footer";
+import { Suspense } from "react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -22,12 +23,21 @@ export const metadata = {
   }
 };
 
+
+function Cargando() {
+  return (
+    <img className="imagen" src="/Loading_2.gif"></img>
+  )
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <header><Image src="/header.jpg" width="500" height="400" alt="Cabecera de la página"></Image></header>
-        <main>{children}</main>
+        <Suspense fallback={<Cargando/>}>
+          <main>{children}</main>
+        </Suspense>
         <Footero/>
       </body>
     </html>
