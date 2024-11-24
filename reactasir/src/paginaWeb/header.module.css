@@ -1,7 +1,7 @@
 .cabecera{
     /* background-color:red; */
     /* background-image: url('/header.jpg'); */
-    background: linear-gradient(rgb(146, 138, 138) 25%, transparent 75%),  url('/header.jpg') no-repeat center;
+    background: linear-gradient(rgba(234, 230, 230, 0.626) 0%, transparent 10%),  url('/poke.jpg') no-repeat center;
     background-repeat:  no-repeat;
     background-position: center;
     background-size: cover;
@@ -11,7 +11,7 @@
     flex:row nowrap;
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
-    color: rgb(134, 235, 231);
+    color: rgb(0, 4, 229);
     justify-content: center;
 }
 

@@ -1,5 +1,5 @@
 main{
-    background-color:greenyellow;
+    background-color:rgb(230, 216, 185);
     height:500px;
     width:100%;
     display:flex;
@@ -8,14 +8,16 @@ main{
 
 main section{
     width:80%;
-    background-color:rgb(232, 200, 158);
+    background-color:rgb(160, 159, 157);
 }
 
 main aside{
     width:20%;
     background-color:rgb(170, 101, 234);
 }
-
+body{
+    background-color: rgb(205, 178, 138);
+}
 @media (max-width:800px){
     aside{
         display:none;
@@ -24,4 +26,8 @@ main aside{
         width:100%;
     }
 
+  }
+
+  .Tarjeta{
+    background-color: black;
   }

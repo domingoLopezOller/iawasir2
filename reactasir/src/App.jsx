@@ -5,10 +5,14 @@ import './App.css'
 import Home from './paginaWeb/home';
 import { Router } from 'express';
 import ImageGallery from './paginaWeb/ImageGallery.modules';
-import ImageGalleryComponent from './paginaWeb/ImageGallery.modules';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { PokemonGrid } from './paginaWeb/PokemonGrid';
 
 function App() {
   const [count, setCount] = useState(0);
+  const resetPokemons=() => {
+
+  };
 
   return (
     <>
@@ -33,6 +37,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <ImageGalleryComponent />
+      <nav onResetPokemons={resetPokemons} />
       </>
 
     
