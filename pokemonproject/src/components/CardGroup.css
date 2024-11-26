@@ -1,0 +1,32 @@
+/* CardGroup.css */
+
+/* Estilos generales para grupos de cartas */
+.card-group {
+    display: flex;
+    flex-direction: column; /* Alineación vertical, una carta debajo de la otra */
+    gap: 0.5rem; /* Espacio pequeño entre las cartas */
+    align-items: center; /* Centra las cartas horizontalmente */
+}
+
+.card-group .card {
+    max-width: 150px; /* Tamaño pequeño de las cartas */
+    width: 100%;  
+    margin: 0 auto; /* Asegura que las cartas estén centradas */
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-group .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-group .card-img-top {
+    object-fit: cover;
+    height: 100px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+  

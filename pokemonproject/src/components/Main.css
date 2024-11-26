@@ -1,0 +1,31 @@
+.main-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #444;
+}
+
+.aside-section {
+  display: flex;
+  flex-direction: row;
+}
+
+aside {
+  flex: 1;
+  /* Otros estilos para el aside */
+}
+
+
+.carousel {
+  margin-top: 20px; /* Ajusta este valor según sea necesario */
+  clear: both; /* Asegúrate de que el carrusel no flote junto a otros elementos */
+}
+
+.carousel img {
+  max-height: 10000px; /* Ajusta la altura máxima de las imágenes */
+  object-fit: cover; /* Asegúrate de que las imágenes se ajusten bien al contenedor */
+}
+
+section {
+  background-color: #444;
+  /* Otros estilos para el section */
+}

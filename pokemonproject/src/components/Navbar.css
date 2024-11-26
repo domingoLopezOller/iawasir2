@@ -1,0 +1,64 @@
+/* Navbar.css */
+.navbar {
+  background-color: #444;
+  padding: 5px 0; /* Aumenta el padding para dar más espacio */
+  text-align: center;
+  margin-top: 0px; /* Espacio entre el header y la navbar */
+  position: sticky; /* Asegura que el navbar se quede en la parte superior cuando se haga scroll */
+  top: 0;
+  z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centra los elementos */
+  align-items: center; /* Alinea verticalmente los elementos */
+}
+
+.navbar ul li {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: color 0.3s ease; /* Transición suave para el hover */
+}
+
+.navbar ul li a i {
+  font-size: 30px;
+  margin-bottom: 1px;
+}
+
+.navbar ul li p {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.navbar ul li a:hover {
+  color: #f4a261; /* Color cuando se pasa el mouse */
+}
+
+.inicio a:hover {
+  color: #e76f51; /* Color específico para el Home */
+}
+
+.blog a:hover {
+  color: #2a9d8f; /* Color específico para el Contact */
+}
+
+.sobremi a:hover {
+  color: #264653; /* Color específico para Services */
+}

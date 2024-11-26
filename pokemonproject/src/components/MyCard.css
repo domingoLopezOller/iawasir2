@@ -1,0 +1,69 @@
+/* Estilos para el nav */
+nav {
+  width: 100%;
+  height: 60px;  /* Ajusta la altura a un valor fijo para evitar el comportamiento con porcentaje */
+  background-color: orange;
+  position: sticky;  /* Asegura que el navbar se quede en la parte superior cuando se haga scroll */
+  top: 0;
+  z-index: 1000;  /* Asegura que el navbar esté por encima de otros elementos */
+  display: flex;
+  justify-content: center;  /* Centra el contenido de manera más confiable */
+  align-items: center;
+}
+
+/* Estilos para los enlaces de la barra de navegación */
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Estilo para cada item de la lista */
+nav ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14%;  /* Ajusta el ancho de cada item */
+  border-right: 1px solid #bbb;
+  height: 100%;
+  text-align: center;
+}
+
+/* Último item sin borde */
+nav ul li:last-child {
+  border-right: none;
+}
+
+/* Estilo para los enlaces */
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 1%;
+  text-decoration: none;
+  width: 100%;
+}
+
+/* Hover y active en los items */
+nav ul li:hover {
+  background-color: lightslategrey;
+}
+
+nav ul li:active {
+  background-color: #04AA6D;
+}
+
+/* Ocultar los textos de los enlaces en pantallas pequeñas */
+@media (max-width: 600px) {
+  nav ul li a p {
+    display: none;
+  }
+
+  nav ul li i {
+    font-size: 1.5rem;  /* Ajusta el tamaño del icono en pantallas pequeñas */
+  }
+}
