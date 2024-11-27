@@ -23,7 +23,7 @@ const NavBar = () => {
           <span className="gen1">
             <Link to="/gen1"> {/* Enlace a la página de Gen1 */}
               <i className="fas fa-dragon"></i>
-              <p>Gen 1</p>
+              <p>Gen1</p>
             </Link>
           </span>
         </li>
@@ -32,8 +32,8 @@ const NavBar = () => {
         <li>
           <span className="gen2">
             <Link to="/gen2"> {/* Enlace a la página de Gen2 */}
-              <i className="fas fa-leaf"></i>
-              <p>Gen 2</p>
+              <i className="fas fa-dragon"></i>
+              <p>Gen2</p>
             </Link>
           </span>
         </li>
@@ -42,8 +42,8 @@ const NavBar = () => {
         <li>
           <span className="gen3">
             <Link to="/gen3"> {/* Enlace a la página de Gen3 */}
-              <i className="fas fa-water"></i>
-              <p>Gen 3</p>
+              <i className="fas fa-dragon"></i>
+              <p>Gen3</p>
             </Link>
           </span>
         </li>

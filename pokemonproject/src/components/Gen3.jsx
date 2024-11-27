@@ -9,11 +9,28 @@ function Gen1() {
   const fetchRandomPokemon = async () => {
     const promises = [];
     for (let i = 0; i < 10; i++) {
-        const randomId = Math.floor(Math.random() * 135) + 252; // Gen 3 tiene 135 Pokémon
+      const randomId = Math.floor(Math.random() * 151) + 1; // Gen 1 tiene 151 Pokémon
       promises.push(axios.get(`https://pokeapi.co/api/v2/pokemon/${randomId}`));
     }
     const results = await Promise.all(promises);
-    setPokemons(results.map((res) => res.data));
+    const pokemonData = results.map((res) => res.data);
+
+    // Obtener información de evolución
+    const evolutionPromises = pokemonData.map((pokemon) =>
+      axios.get(pokemon.species.url)
+    );
+    const evolutionResults = await Promise.all(evolutionPromises);
+    const evolutionData = await Promise.all(
+      evolutionResults.map((res) => axios.get(res.data.evolution_chain.url))
+    );
+
+    // Combinar datos de Pokémon y evolución
+    const combinedData = pokemonData.map((pokemon, index) => ({
+      ...pokemon,
+      evolution: evolutionData[index].data.chain,
+    }));
+
+    setPokemons(combinedData);
   };
 
   useEffect(() => {
@@ -29,6 +46,7 @@ function Gen1() {
             <img src={pokemon.sprites.front_default} alt={pokemon.name} />
             <h2>{pokemon.name}</h2>
             <p>Tipo: {pokemon.types.map((type) => type.type.name).join(', ')}</p>
+            <p>Evolución: {pokemon.evolution.species.name}</p>
           </div>
         ))}
       </div>
