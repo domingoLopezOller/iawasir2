@@ -4,9 +4,32 @@
 .card-group {
     display: flex;
     flex-direction: column; /* Alineación vertical, una carta debajo de la otra */
-    gap: 0.5rem; /* Espacio pequeño entre las cartas */
+    gap: 1rem; /* Espacio pequeño entre las cartas */
     align-items: center; /* Centra las cartas horizontalmente */
+    text-align: center;
+    padding: 30px;
 }
+
+.card-container {
+    display: flex;
+    flex-wrap: column;
+    justify-content: center;
+    gap: 15px; /* Espacio entre las tarjetas */
+    align-items: center;
+    width:100%; 
+  }
+
+.card-pokemon {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;;
+    width: 200px;
+    height: 250px; /* Aumenta el tamaño de las cartas */
+    padding: 2px;
+    text-align: center;
+
+}
+
+
 
 .card-group .card {
     max-width: 150px; /* Tamaño pequeño de las cartas */

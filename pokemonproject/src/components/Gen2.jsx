@@ -26,7 +26,7 @@ function Gen1() {
       <h1>Pokémon de la Generación 2</h1>
       <div className="card-container">
         {pokemons.map((pokemon) => (
-          <div key={pokemon.id} className="card">
+          <div key={pokemon.id} className="card-pokemon">
             <img src={pokemon.sprites.front_default} alt={pokemon.name} />
             <h2>{pokemon.name}</h2>
             <p>Tipo: {pokemon.types.map((type) => type.type.name).join(', ')}</p>
