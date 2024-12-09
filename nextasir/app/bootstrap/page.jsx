@@ -1,6 +1,6 @@
 //page.js
 
-export default function Home() {
+export default function Bootstrap() {
     return (
       <div>
         {/* navar*/}

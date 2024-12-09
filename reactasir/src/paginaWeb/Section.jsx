@@ -7,7 +7,7 @@ import Tarjeta from './Cards'
 function Section() {
   return (
     <section>
-      <article> <Tarjeta/> <Tarjeta/>  <Tarjeta/> </article>
+      <article> <Tarjeta/> </article>
       <ControlledCarousel/>
     </section>
   )

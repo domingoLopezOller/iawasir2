@@ -9,7 +9,8 @@ fetch("https://pokeapi.co/api/v2/pokemon/"+id) // hacemos la petición get
 .then(res => res.json()) // cuando hayamos terminado (then) parseamos a json la respuesta de la petición 
 .then(data => 
   setPokemon( 
-{ numero: data.id, img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"+data.id+".png", 
+{ numero: data.id, 
+  img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"+data.id+".png", 
   imgJuego: data.sprites.front_default, 
   imgCvg: data.sprites.other.dream_world.front_default, 
   nombre: data.name, 

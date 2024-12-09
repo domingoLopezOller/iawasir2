@@ -15,7 +15,7 @@ import PokemonModal from "@/componentes/pokemon_modal";
 import { Navbar } from "react-bootstrap";
 import PokemonList from "@/componentes/pokemon_list";
 import { FetchPokemon } from "@/componentes/FetchPokemon";
-
+import NavigationBar from "@/componentes/nav";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -51,31 +51,19 @@ export default function RootLayout({ children }) {
     }
 
   return (
-    <html lang="en">
+    <html lang={idioma}>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
       <AddBootstrap/>
           <header className="header">
             <Image src="/pokemon.jpg" width="2500" height="300" alt="header" />
           </header>
-        <nav>
-          <Link href="/">{dict.home}</Link> -
-          <Link href="/esperando">{dict.esperando}</Link>
-          <button onClick={() => changeLanguage('es')} className="p-2 rounded-full hover:bg-gray-200">
-	          <Image src="/españa.png" alt="Español" width={30} height={28} />
-          </button>
-          <button onClick={() => changeLanguage('en')} className="p-2 rounded-full hover:bg-gray-200">
-	          <Image src="/iglaterra.png" alt="Inglés" width={30} height={28} />
-          </button>
-          <button onClick={() => changeLanguage('fr')} className="p-2 rounded-full hover:bg-gray-200">
-	          <Image src="/francia.png" alt="frances" width={30} height={28} />
-          </button>
-        </nav> 
+          <NavigationBar idioma={idioma} changeLanguage={changeLanguage}>
+         </NavigationBar>
           <main> 
           <h1>{dict.title}</h1>
           <h2>{dict.description}</h2>
           {children}
           </main>
-          <bootstrap/>
       </body>
     </html>
   );

@@ -9,8 +9,8 @@ footer{
 }
 
 footer a{
-    font-size:40px;
-    color:aqua;
+    font-size:50px;
+    color:rgb(50, 183, 183);
 }
 footer a:hover{
     color:rgb(11, 10, 9);

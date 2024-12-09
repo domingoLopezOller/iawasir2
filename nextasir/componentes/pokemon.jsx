@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react';
 
 export default function RandomPokemonCard() {
     const [pokemons, setPokemon] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
    
     useEffect(() => {
     const fetchRandomPokemon = async () => { 
@@ -20,17 +18,13 @@ export default function RandomPokemonCard() {
 
     fetchRandomPokemon();
     }, []);
-    if (loading) {
-      return <div>Cargando...</div>; // Componente de carga
-    }
-    if (error) {
-    return <div>Error: {error}</div>; // Manejo de errores
-    }
-        return (
-        <div style={{border: "1px solid #ccc", padding:"10px", textAlign:"center"}}>
-          <img src={pokemons.img} alt={pokemons.nombre} style={{width:"150px"}} />
-          <h3>{pokemons.nombre.toUpperCase()}</h3>
-          <a href={`/pokemon/${pokemon.numero}`}>Saber más</a>
+    if (!pokemons) return <div>Cargando...</div>;
+       
+    return (
+        <div style={{border: "1px solid #red", padding:"10px", textAlign:"center"}}>
+          <img src={pokemons.img} alt={pokemons.nombre} style={{width:"550px"}} />
+          <h3>{pokemons.nombre ? pokemons.nombre.toUpperCase() : "Cargando..." }</h3>
+          <a href={`/pokemon/${pokemons.numero}`}>Saber más</a>
         </div>
         );
        }
