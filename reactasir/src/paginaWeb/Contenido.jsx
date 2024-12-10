@@ -1,33 +1,39 @@
 import React from 'react'
 import Nav from './Nav'
-import { BrowserRouter as Router, Route, Routes, useParams, Outlet } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useParams, Outlet, json } from "react-router-dom";
 import Section from './Section'
 import Aside from './Aside'
-
 import './contenido.module.css'
 import Rutas from './Rutas'
 import { Pokemon } from './pokemos'
 import { PokemonGrid } from './PokemonGrid'
 import Contacto from './Contacto';
-import ContactoDetalle from './DetalleContacto';
-import DetalleContacto from './DetalleContacto';
-import ImageAvatars from './Contacto';
-import SizeAvatars from './Contacto';
 import MySkills from './avatar';
 import Avatar from 'react-avatar';
+import ImageGalleryComponent from './ImageGallery.modules';
+import Tarjeta from './Cards';
+import ImageCards from './CardsGallery';
+import ControlledCarousel from '../Carousel';
 
 function Contenido() {
   return (
     <>
     <Router>
-    <Nav/>      
+    <Nav/>   
+    <main>   
+      <Aside>
+        <Routes>
+          <Route path="/about" element={<About/>} />
+        </Routes>
+      </Aside>
         {/* <Section/> */}
         <section>
         <Routes>
         <Route exact path="/" element={<Home/>} />
 	      <Route path="/noticias" element={<Noticias/>}/>
         <Route path="/jefatura" element={<Jefatura/>} /> 
-        <Route path="/informatica" element={<Informatica/>} />   
+        <Route path="/informatica" element={<Informatica/>} /> 
+        <Route path="/defensa" element={<Defensa/>} /> 
         {/* <Route path="/noticias" element={<Noticias/>}/>
         <Route path="/jefatura" element={<Jefatura/>}/>
         <Route path="/informatica" element={<Informatica/>}/> */}
@@ -37,7 +43,8 @@ function Contenido() {
         <Route path="/about/Domingo" element={<Domingo/>}/>
         <Route path="/about/Jazmin" element={<Jazmin/>}/>
         </Routes>  
-        </section>    
+        </section>  
+        </main>  
     </Router>
     </>
   )
@@ -45,7 +52,11 @@ function Contenido() {
 
 export default Contenido
 function Home() {
-  return <Pokemon id="25" />;
+  return <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', padding: '1rem', gap: '2rem' }}>
+  <div style={{ flex: 2 }}>
+   <ImageCards/>
+ </div>
+</div>
 }
 
 //Sólo se verá con /about en la URL
@@ -58,7 +69,9 @@ function About(){
 
 function Noticias() {
     return  <div>
-      <PokemonGrid/>
+       <h1>NOTICIAS DE HUÉRCAL OVERA</h1>
+      <p>SE HA TERMINADO LA ALERTA ROJA POR INUNDACIÓN </p>
+      <hr/>
       <Outlet/>
     </div>
   }
@@ -82,8 +95,8 @@ function NotFound() {
 
 function Jefatura() {
   return <>
-   <div>
-    <PokemonGrid/>
+   <div >
+    <ImageCards/>
    </div>
   </>
 }
@@ -91,7 +104,13 @@ function Jefatura() {
 function Informatica(){
   return <>
   <div>
-    <PokemonGrid/>
+    <ImageGalleryComponent/>
+  </div>
+  </>
+}
+function Defensa(){
+  return <>
+  <div>
   </div>
   </>
 }

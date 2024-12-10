@@ -10,27 +10,27 @@ function ControlledCarousel() {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect} style={{width:"25%"}}>
+    <Carousel activeIndex={index} onSelect={handleSelect} style={{width:"90%"}}>
       <Carousel.Item>
-        <img width="600px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Alcazaba_de_Almer%C3%ADa.jpg/640px-Alcazaba_de_Almer%C3%ADa.jpg" alt="Alcazaba de Almería"/>
+        <img width="700px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Alcazaba_de_Almer%C3%ADa.jpg/640px-Alcazaba_de_Almer%C3%ADa.jpg" alt="Alcazaba de Almería"/>
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>Alcazaba de almeria</h3>
+          <p>Castillo y murallas del Cerro de San Cristóbal de la ciudad española de Almería</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img width="600px" src="https://turismoalmanzora.com/wp-content/uploads/imagen-de-albox.jpg" alt="Santuario del Saliente"/>
+        <img width="700px" src="https://turismoalmanzora.com/wp-content/uploads/imagen-de-albox.jpg" alt="Santuario del Saliente"/>
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Santuario del saliente</h3>
+          <p>Situado sobre la cima del Monte Roel en la Sierra de las Estancias y construido en el siglo XVIII, es la joya arquitectónica más importante </p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img width="600px" src="/alhambra.jpg" alt="Alhambra" />
+        <img width="700px" src="alhambra.jpg" alt="Alhambra" />
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          <h3>Alhambraa</h3>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          Complejo monumental sobre una ciudad palatina andalusí situada en Granada, España.
           </p>
         </Carousel.Caption>
       </Carousel.Item>

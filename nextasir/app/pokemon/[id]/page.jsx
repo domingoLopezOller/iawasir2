@@ -24,14 +24,18 @@ async function fetchData(id) {
     return (
       <div>
         <h1>Detalles del Pokémon</h1>
-        <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+        <div style={{ textAlign: 'center', marginTop: '1rem'}}>
           <h3>
             #{pokemon.numero} - {pokemon.nombre.toUpperCase()}
           </h3>
           <img src={pokemon.img} alt={pokemon.nombre} style={{ width: '500px', height: '450px' }}/>
           <p>HP: {pokemon.hp} | Ataque: {pokemon.ataque} | Defensa: {pokemon.defensa} | Especial: {pokemon.especial}</p>
           <p>Experiencia base: {pokemon.experiencia}</p>
-          <a href="/pokemon" style={{color:"blue", textDecoration: "underline"}}>Volver</a>
+          <a href="/home" style={{color:"blue", textDecoration: "underline"}}>Volver</a>
+          <p/>
+          <a href="/pokemon" style={{color:"blue", textDecoration: "underline"}}>Anterior</a>
+          <p/>
+          <a href="/pokemon" style={{color:"blue", textDecoration: "underline"}}>Siguiente</a>
         </div>
       </div>
     );

@@ -1,23 +1,22 @@
 .cabecera{
     /* background-color:red; */
     /* background-image: url('/header.jpg'); */
-    background: linear-gradient(rgba(234, 230, 230, 0.626) 0%, transparent 10%),  url('/poke.jpg') no-repeat center;
+    background: linear-gradient(rgba(234, 230, 230, 0.626) 0%, transparent 10%),url('/header.jpg') no-repeat center;
     background-repeat:  no-repeat;
     background-position: center;
     background-size: cover;
-    height:400px;
+    height:450px;
     width:100%;
     display:flex;
     flex:row nowrap;
     align-items: center;
-    font-family: 'Times New Roman', Times, serif;
-    color: rgb(0, 4, 229);
+    color: rgb(0, 0, 0);
     justify-content: center;
 }
 
 @media (max-width:800px){
     .cabecera{
-        background-color: greenyellow;
+        background-color: rgb(196, 212, 174);
         background-image: none;
     }
 
@@ -26,7 +25,7 @@
   .header{
     position: fixed;
   }
-
+ 
 
  
  

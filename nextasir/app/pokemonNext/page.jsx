@@ -4,8 +4,11 @@ import ErrorBoundary from "./error"
 
 const Page = ({}) => {
  return (
- <ErrorBoundary>
-    <Suspense fallback={<h2>Cargando....</h2>}><FetchPokemon/></Suspense>
+ <ErrorBoundary >
+    <Suspense 
+     fallback={<h2>Cargando....</h2>} >
+     </Suspense>
+  
  </ErrorBoundary>
  )
 }

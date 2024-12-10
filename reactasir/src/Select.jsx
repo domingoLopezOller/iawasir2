@@ -1,33 +1,30 @@
-import * as React from 'react';
+import React from 'react';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { Autocomplete, TextField } from '@mui/material';
+import { MostrarHeroe } from './paginaWeb/Heroe';
 
-export default function BasicSelect() {
-  const [age, setAge] = React.useState('');
+const heroes = [
+  {label: 'Superman'},
+  {label: 'Grenn Lantern'},
+  {label: 'Wonder Woman'},
+];
 
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
-
+export default function HeroAutocomplete() {
   return (
-    <Box sx={{ minWidth: 120 }}>
-      <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Age</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={age}
-          label="Age"
-          onChange={handleChange}
-        >
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
-        </Select>
-      </FormControl>
+    <div>
+     <Box sx={{ minWidth: 120 }}>
+      <h5>Marvel</h5>
+        <Autocomplete disablePortal
+        options={heroes} 
+       getOptionLabel={(option) => option.label}
+       renderInput={(params) => <TextField {...params} label="Choose a hero"/>} 
+        fullWidth
+       />
     </Box>
+    </div>
   );
 }

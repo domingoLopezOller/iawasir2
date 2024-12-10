@@ -4,9 +4,7 @@ import style from './header.module.css'
 function Header() {
   return (
     <header className={style.cabecera}>
-        <img src="/pokemon.png" width="90%"/>
-
-        
+      <h1>PAGINA INSTITUTO</h1>     
     </header>
   )
 }

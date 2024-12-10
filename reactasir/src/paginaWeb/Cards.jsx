@@ -1,9 +1,8 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
-
-function Tarjeta ({ title, text, imgSrc, hp, ataque, defensa}) 
+import {  } from './noticias.json';
+function Tarjeta () 
 {
   return (
     <Card style={{ width: '30rem', margin: '30px', display:'grid', gap: '20px' }}>

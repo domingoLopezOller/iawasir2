@@ -21,10 +21,11 @@ export default function RandomPokemonCard() {
     if (!pokemons) return <div>Cargando...</div>;
        
     return (
-        <div style={{border: "1px solid #red", padding:"10px", textAlign:"center"}}>
-          <img src={pokemons.img} alt={pokemons.nombre} style={{width:"550px"}} />
+        <div style={{border: "1px solid #red", padding:"20px", textAlign:"center"}}>
+          <img src={pokemons.img} alt={pokemons.nombre} style={{width:"600px"}} />
           <h3>{pokemons.nombre ? pokemons.nombre.toUpperCase() : "Cargando..." }</h3>
           <a href={`/pokemon/${pokemons.numero}`}>Saber más</a>
+          <link rel='icon' href='/pokemon.ico' sizes='any'/>
         </div>
         );
        }

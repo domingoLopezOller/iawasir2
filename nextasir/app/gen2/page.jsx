@@ -1,16 +1,23 @@
 'use client'
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
-export default function Gen2(){
+export default function Gen2() {
     const [pokemons, setPokemons] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
         async function fetchGen2Pokemons() {
+          const startId= 152;
+          const endId= 251;
           try {
-            const promises = Array.from({ length: 10 }, (_, i) => 
-              fetch(`https://pokeapi.co/api/v2/pokemon/${152 + i}`)
+            const ids =  Array.from({ length: 10 }, () => 
+            Math.floor(Math.random() * (endId - startId + 1)) + startId
+          );
+
+            const promises = ids.map((id) => 
+              fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
                 .then((res) => res.json())
                 .then((data) => ({
                   numero: data.id,
@@ -31,7 +38,7 @@ export default function Gen2(){
         fetchGen2Pokemons();
       }, []);
     
-      if (loading) return <div>Cargando...</div>;
+      if (loading) return <div><Image src="/cargando.png" width="700" height="700" alt="cargando"/></div>;
       if (error) return <div>Error: {error}</div>;
     
       return (

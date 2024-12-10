@@ -7,7 +7,7 @@ export default function Page() {
     <h2>Esperando 3min</h2>
     <Suspense fallback="Cargando...">
         {sleep(3000)}
-        <h1>PAGINA QUE ESPERA 3 SEGUNDOS PARA Q SE MUESTRE</h1>
+        <h1>HAY PROBLEMA</h1>
     </Suspense>
     </>
     );

@@ -2,18 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { getDictionary } from "./diccionario";
-import RootLayout from "@/app/layout";
 
 
-function NavigationBar(){
+function NavigationBar({ idioma, changeLanguage }) {
   return (
-    <Navbar bg="primary" variant="dark" expand="lg" className="p-3">
+    <Navbar bg="primary" variant="dark" expand="lg" className="p-4">
     <div className="container">
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
           {/* Rutas principales */}
-          <Nav.Link as={Link} href="/home">
+          <Nav.Link as={Link} href="/home" >
             Home
           </Nav.Link>
           <Nav.Link as={Link} href="/gen1">

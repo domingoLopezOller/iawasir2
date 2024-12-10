@@ -37,6 +37,8 @@ function MySkills() {
     return <div>Avatars</div>
   }
 
+
+
 function Producto() {
     //Lectura del parámetro de la URL
     const params = useParams();

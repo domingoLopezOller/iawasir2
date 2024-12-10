@@ -13,9 +13,10 @@ function Nav() {
   return (
     <nav className={style.navegacion}>
         <Link to="/"><AiFillHome/>Inicio</Link>  
-        <Link to="/noticias"><AiFillRobot />G1 </Link> 
-        <Link to="/jefatura"><AiFillSmile/> G2 </Link>
-        <Link to="/informatica"><AiFillRead /> G3 </Link>
+        <Link to="/noticias"><AiFillRobot />Noticias </Link> 
+        <Link to="/jefatura"><AiFillSmile/> Jefatura </Link>
+        <Link to="/informatica"><AiFillRead />Fotos y videos </Link>
+        <Link to="/defensa"><AiFillRead />Defensa</Link>
         <div className={style.contactoDropdown}>
         <span><IoMdContact />Contacto</span>
         <div className={style.dropdownContent}>

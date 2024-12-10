@@ -1,5 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
+import Image from "next/image";
+import Error from "../not-found";
 
 export default function Gen3(){
     const [pokemons, setPokemons] = useState([]);
@@ -8,9 +10,14 @@ export default function Gen3(){
 
     useEffect(() => {
         async function fetchGen3Pokemons() {
+          const startId= 252;
+          const endId=400;
           try {
-            const promises = Array.from({ length: 10 }, (_, i) => 
-              fetch(`https://pokeapi.co/api/v2/pokemon/${252 + i}`)
+            const ids =  Array.from({ length: 10 }, () => 
+              Math.floor(Math.random() * (endId - startId + 1)) + startId
+            );
+            const promises = ids.map((id) => 
+              fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
                 .then((res) => res.json())
                 .then((data) => ({
                   numero: data.id,
@@ -31,29 +38,10 @@ export default function Gen3(){
         fetchGen3Pokemons();
       }, []);
     
-      if (loading) return <div>Cargando...</div>;
+      if (loading) return <div><Image src="/cargando.png" width="700" height="700" alt="cargando"/></div>;
       if (error) return <div>Error: {error}</div>;
-    
+
       return (
-        <div>
-          <h1>Pokemones Gen 3</h1>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
-            {pokemons.map((pokemon) => (
-              <div
-                key={pokemon.numero}
-                style={{
-                  border: "1px solid gray",
-                  borderRadius: "10px",
-                  padding: "10px",
-                  textAlign: "center",
-                }}
-              >
-                <img src={pokemon.img} alt={pokemon.nombre} style={{ width: "450px" }} />
-                <h3>{pokemon.nombre.toUpperCase()}</h3>
-                <a href={`/pokemon/${pokemon.numero}`}>Saber más</a>
-              </div>
-            ))}
-          </div>
-        </div>
+       <Error/>
       );
     }

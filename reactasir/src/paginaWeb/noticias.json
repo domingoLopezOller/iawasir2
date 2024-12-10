@@ -1,0 +1,17 @@
+[
+    {
+        "imagen":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fvandal.elespanol.com%2Fnoticia%2F1350719526%2Festos-son-los-10-pokemon-preferidos-por-los-fans%2F&psig=AOvVaw3qTdqYUjv81uPJOERvowvx&ust=1733917942581000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJDJnu6RnYoDFQAAAAAdAAAAABAE", 
+        "titulo":"Pokemones",
+        "texto":"Estos son los 10 pokemones"
+    },
+    {
+        "imagen":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.servigroup.com%2Fes%2Fblog%2Fque-ver-en-almeria%2F&psig=AOvVaw1qPvoqR6AkH-zfB-OyUkqI&ust=1733918005312000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLis7oiSnYoDFQAAAAAdAAAAABAE", 
+        "titulo":"Almeria",
+        "texto":"Que ver en Almeria"
+    },
+    {
+        "imagen":"https://i.ytimg.com/vi/t7iYc0yOUc8/maxresdefault.jpg", 
+        "titulo":"Instituto Cura Valer",
+        "texto":"Instuto en Huercal Overa"
+    }
+]

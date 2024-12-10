@@ -24,7 +24,7 @@ function RedesSociales({RRSS}) {
           })
         }
         {/*Enlace del instituto */}
-        <a href="" > <img src="/logo.png" width="50" alt="logoIES"/> IES Cura Valera </a>
+        <a href="" > <img src="/logo.png" width="30" alt="logoIES"/> IES Cura Valera </a>
     </div>
   )
 }

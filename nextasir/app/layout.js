@@ -48,17 +48,19 @@ export default function RootLayout({ children }) {
     
     const changeLanguage = (lang) => {
       setIdioma(lang);
-    }
+    };
 
   return (
     <html lang={idioma}>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body  className={`${geistSans.variable} ${geistMono.variable}`}>
       <AddBootstrap/>
           <header className="header">
             <Image src="/pokemon.jpg" width="2500" height="300" alt="header" />
           </header>
-          <NavigationBar idioma={idioma} changeLanguage={changeLanguage}>
-         </NavigationBar>
+          <NavigationBar 
+          idioma={idioma} 
+          changeLanguage={changeLanguage}
+          />
           <main> 
           <h1>{dict.title}</h1>
           <h2>{dict.description}</h2>
