@@ -1,6 +1,6 @@
 export const FetchPokemon = async () => {
     let pokemons;
-      const response = await fetch('https://pokeapi.co/api/v2/pokemo');
+      const response = await fetch('https://pokeapi.co/api/v2/pokemon');
     
       if (!response.ok) {
         throw new Error('Error al cargar los pokemons');
