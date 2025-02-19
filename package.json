@@ -1,6 +1,9 @@
 {
   "dependencies": {
+    "@nestjs/typeorm": "^11.0.0",
     "jsc": "^0.3.11",
-    "tsc": "^2.0.4"
+    "mysql2": "^3.12.0",
+    "tsc": "^2.0.4",
+    "typeorm": "^0.3.20"
   }
 }
