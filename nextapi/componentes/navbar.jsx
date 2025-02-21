@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation"
 
 export default function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const [username, setUsername] = useState("")
+  const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const router = useRouter()
 
@@ -16,16 +16,25 @@ export default function Navbar() {
       const response = await fetch("http://localhost:5000/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ email, password }),
       })
-
+      console.log(JSON.stringify({ email, password }));
       if (response.ok) {
-        const { token } = await response.json()
-        localStorage.setItem("token", token)
-        setIsLoggedIn(true)
-        router.push("/bibliotecatic/admin/libros")
+        const data = await response.json()
+
+        if (data.token) { // ¿Hay token? Si lo hay lo guardo en un localStorage
+          localStorage.setItem("token", data.token)
+          setIsLoggedIn(true)
+          router.push("/bibliotecatic/admin/libros")
+        } else {
+          alert("Login failed: No se ha recibido el token")
+          setIsLoggedIn(false)
+          router.push("/bibliotecatic/")
+        }
       } else {
-        alert("Login failed")
+        setIsLoggedIn(false)
+        alert("Login failed: " + response.statusText)
+        router.push("/bibliotecatic/")
       }
     } catch (error) {
       console.error("Login error:", error)
@@ -34,6 +43,7 @@ export default function Navbar() {
   }
 
   const handleLogout = () => {
+    console.log(localStorage.token);
     localStorage.removeItem("token")
     setIsLoggedIn(false)
     router.push("/bibliotecatic/")
@@ -45,13 +55,13 @@ export default function Navbar() {
         <Link href="/bibliotecatic/" className="text-xl font-bold">
           BibliotecaTIC
         </Link>
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center gap-4">
           {isLoggedIn ? (
             <>
               <Link href="/bibliotecatic/admin/libros">
                 Admin Libros
               </Link>
-              <Link href="/bibliotecatic/admin/autores" >
+              <Link href="/bibliotecatic/admin/autores">
                 Admin Autores
               </Link>
               <button onClick={handleLogout} >
@@ -60,7 +70,7 @@ export default function Navbar() {
             </>
           ) : (
             <form onSubmit={handleLogin} className="flex items-center gap-4">
-              <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
+              <input type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
               <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
               <button type="submit" className="bg-blue-500 px-4 py-1 rounded">
                 Login
