@@ -1,12 +1,11 @@
 import { Module } from '@nestjs/common';
-import { ApiService } from './api.service';
-import { ApiController } from './api.controller';
-import { TypeOrmModule } from '@nestjs/typeorm';
-import { Api } from './entities/api.entity';
+import { UsersModule } from './users/users.module';
+import { PostsModule } from './posts/posts.module';
+import { UsersController } from './users/users.controller';
+import { UsersService } from './users/users.service';
 
 @Module({
-  imports :[TypeOrmModule.forFeature([Api])],
-  controllers: [ApiController],
-  providers: [ApiService],
+  imports: [UsersModule, PostsModule],
+  
 })
 export class ApiModule {}

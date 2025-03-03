@@ -1,8 +1,9 @@
-import { Column, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 
+@Entity()
 export class Biblioteca {
     @PrimaryGeneratedColumn()
-    id: number;
+     id: number;
     @Column({type: 'varchar', length:'50'})
      titulo: string;
     @Column({type: 'varchar', length:'50'})
@@ -15,6 +16,4 @@ export class Biblioteca {
      stock: number;
     @Column()
      precio: number;
-
-
 }

@@ -17,18 +17,18 @@ export class AlumnosService {
   }
 
   findAll() {
-    return `This action returns all alumnos`;
+    return this.alumnoRepository.find();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} alumno`;
+    return this.alumnoRepository.findOne({where: {id}});
   }
 
   update(id: number, updateAlumnoDto: UpdateAlumnoDto) {
-    return `This action updates a #${id} alumno`;
+    return this.alumnoRepository.update(id, updateAlumnoDto);
   }
 
   remove(id: number) {
-    return `This action removes a #${id} alumno`;
+    return this.alumnoRepository.delete(id);
   }
 }
