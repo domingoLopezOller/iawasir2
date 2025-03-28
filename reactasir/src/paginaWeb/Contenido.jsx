@@ -7,6 +7,9 @@ import Aside from './Aside'
 import './contenido.module.css'
 import Rutas from './Rutas'
 import { CambiarNombre } from './CambiarNombre';
+import { Pokemon } from './Pokemon';
+import Tarjeta from './Cards';
+import noticias from './noticias.json';
 
 function Contenido() {
   return (
@@ -24,16 +27,13 @@ function Contenido() {
         {/* <Section/> */}
         <section>
         <Routes>
-        <Route exact path="/" element={<Home/>} />
+        <Route path="/" element={<Home/>} />
 	      <Route path="/noticias" element={<Noticias/>}>
           <Route path="/noticias/jefatura" element={<Jefatura/>} />  
           <Route path="/noticias/informatica" element={<Informatica/>} />  
         </Route>
-        {/* <Route path="/noticias" element={<Noticias/>}/>
-        <Route path="/noticias/jefatura" element={<Jefatura/>}/>
-        <Route path="/noticias/informatica" element={<Informatica/>}/> */}
-        {/* <Route path="/producto/:numero" element={<Producto/>} /> */}
         <Route path="/about" element={<About/>} />
+        <Route path="/defensa" element={<Defensa/>} />
         <Route path="*" element={<NotFound/>} />
         </Routes>  
         </section>
@@ -45,8 +45,13 @@ function Contenido() {
 }
 
 export default Contenido
-function Home() {
-  return <CambiarNombre/>;
+function Home(){
+  return <>
+    <Tarjeta imagen="https://www.micole.net/imagenes/colegio/logo/4534/cura-valera_512.png" titulo="IES Cura Valera" texto="Un buen instituto donde estudiar"/>
+    <Tarjeta imagen="https://miro.medium.com/v2/resize:fit:305/1*Q1Nue45Q7N2xMFc6ehEOdg.png" titulo="POKEAPI" texto="API abierta para hacer consultas de Pokemon"/>
+    <Tarjeta imagen="https://www.dosde.com/discover/wp-content/uploads/2017/02/alhambra-de-granada-dosde-publishing.jpg" titulo="Granada" texto="Bonita provincia de Andalucía"/>
+    
+  </>
 }
 
 //Sólo se verá con /about en la URL
@@ -91,4 +96,13 @@ function Informatica() {
  <h2>NOTICIAS DE INFORMATICA</h2>
  <p>¿quieres conocer los nuevos avances en tecnología</p>
  </>
+}
+function Defensa() {
+  //Lectura de las noticias en formato json y muestra la tarjeta correspondiente
+  function getNoticias(noticias){ return noticias.map((noticia,index) => {
+      return <Tarjeta key= {index} imagen={noticia.imagen} titulo={noticia.titulo} texto={noticia.texto}/>;
+    });
+  }
+  return getNoticias(noticias);
+  
 }
